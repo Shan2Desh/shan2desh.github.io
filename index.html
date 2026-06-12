@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Shantanu Deshmukh — Industrial Engineer</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet"/>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --blue-50: #EFF6FF;
+    --blue-100: #DBEAFE;
+    --blue-200: #BFDBFE;
+    --blue-400: #60A5FA;
+    --blue-500: #3B82F6;
+    --blue-600: #2563EB;
+    --blue-700: #1D4ED8;
+    --blue-800: #1E40AF;
+    --blue-900: #1E3A8A;
+    --slate-50: #F8FAFC;
+    --slate-100: #F1F5F9;
+    --slate-200: #E2E8F0;
+    --slate-300: #CBD5E1;
+    --slate-400: #94A3B8;
+    --slate-500: #64748B;
+    --slate-600: #475569;
+    --slate-700: #334155;
+    --slate-800: #1E293B;
+    --slate-900: #0F172A;
+    --white: #ffffff;
+    --nav-h: 64px;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--white);
+    color: var(--slate-800);
+    line-height: 1.7;
+    font-size: 16px;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    height: var(--nav-h);
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--slate-200);
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 2rem;
+  }
+  .nav-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    color: var(--blue-700);
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    text-decoration: none;
+  }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a {
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--slate-500);
+    letter-spacing: 0.03em;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--blue-600); }
+
+  /* SECTIONS */
+  section { padding: 5rem 2rem; }
+  .container { max-width: 860px; margin: 0 auto; }
+  .section-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--blue-500);
+    margin-bottom: 0.5rem;
+  }
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-weight: 600;
+    color: var(--slate-800);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+  .divider {
+    width: 48px; height: 3px;
+    background: var(--blue-400);
+    border-radius: 2px;
+    margin-bottom: 2.5rem;
+  }
+
+  /* HERO */
+  #hero {
+    min-height: 100vh;
+    padding-top: calc(var(--nav-h) + 4rem);
+    background: linear-gradient(160deg, var(--blue-50) 0%, var(--white) 60%);
+    display: flex; align-items: center;
+  }
+  .hero-inner {
+    max-width: 860px; margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 260px;
+    gap: 4rem;
+    align-items: center;
+  }
+  .hero-eyebrow {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--blue-500);
+    margin-bottom: 1rem;
+  }
+  .hero-name {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.4rem, 6vw, 3.8rem);
+    font-weight: 600;
+    color: var(--slate-900);
+    line-height: 1.1;
+    margin-bottom: 1rem;
+  }
+  .hero-tagline {
+    font-size: 1.1rem;
+    color: var(--slate-500);
+    font-weight: 300;
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+  }
+  .hero-location {
+    font-size: 0.875rem;
+    color: var(--slate-400);
+    margin-bottom: 2rem;
+    display: flex; align-items: center; gap: 0.4rem;
+  }
+  .hero-location::before { content: "📍"; font-size: 0.8rem; }
+  .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .btn-primary {
+    display: inline-block;
+    padding: 0.7rem 1.5rem;
+    background: var(--blue-600);
+    color: var(--white);
+    border-radius: 6px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.15s;
+    letter-spacing: 0.02em;
+  }
+  .btn-primary:hover { background: var(--blue-700); transform: translateY(-1px); }
+  .btn-secondary {
+    display: inline-block;
+    padding: 0.7rem 1.5rem;
+    background: transparent;
+    color: var(--blue-600);
+    border: 1.5px solid var(--blue-300);
+    border-radius: 6px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: border-color 0.2s, background 0.2s, transform 0.15s;
+    letter-spacing: 0.02em;
+  }
+  .btn-secondary:hover { border-color: var(--blue-500); background: var(--blue-50); transform: translateY(-1px); }
+  .hero-photo-wrap {
+    display: flex; justify-content: center;
+  }
+  .hero-photo {
+    width: 220px; height: 220px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--white);
+    box-shadow: 0 0 0 3px var(--blue-200), 0 16px 48px rgba(37,99,235,0.12);
+  }
+  .hero-photo-placeholder {
+    width: 220px; height: 220px;
+    border-radius: 50%;
+    background: var(--blue-100);
+    border: 4px solid var(--white);
+    box-shadow: 0 0 0 3px var(--blue-200), 0 16px 48px rgba(37,99,235,0.12);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    color: var(--blue-400);
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-align: center;
+    gap: 0.5rem;
+  }
+  .hero-photo-placeholder svg { width: 48px; height: 48px; opacity: 0.5; }
+
+  /* ABOUT */
+  #about { background: var(--white); }
+  .about-text {
+    font-size: 1.05rem;
+    color: var(--slate-600);
+    line-height: 1.85;
+    max-width: 680px;
+  }
+  .about-text p + p { margin-top: 1.2rem; }
+  .about-tags {
+    display: flex; flex-wrap: wrap; gap: 0.5rem;
+    margin-top: 2rem;
+  }
+  .tag {
+    display: inline-block;
+    padding: 0.3rem 0.85rem;
+    background: var(--blue-50);
+    color: var(--blue-700);
+    border: 1px solid var(--blue-100);
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+  }
+
+  /* PROJECTS */
+  #projects { background: var(--slate-50); }
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+  }
+  .project-card {
+    background: var(--white);
+    border: 1px solid var(--slate-200);
+    border-radius: 12px;
+    padding: 1.75rem;
+    transition: box-shadow 0.2s, transform 0.2s;
+    position: relative;
+    overflow: hidden;
+  }
+  .project-card::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0;
+    height: 3px;
+    background: var(--blue-400);
+  }
+  .project-card:hover { box-shadow: 0 8px 32px rgba(37,99,235,0.1); transform: translateY(-2px); }
+  .project-company {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--blue-500);
+    margin-bottom: 0.4rem;
+  }
+  .project-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--slate-800);
+    margin-bottom: 0.3rem;
+    line-height: 1.3;
+  }
+  .project-period {
+    font-size: 0.75rem;
+    color: var(--slate-400);
+    margin-bottom: 1rem;
+  }
+  .star-block { margin-bottom: 0.7rem; }
+  .star-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--blue-600);
+    margin-bottom: 0.15rem;
+  }
+  .star-text {
+    font-size: 0.875rem;
+    color: var(--slate-600);
+    line-height: 1.6;
+  }
+  .project-result {
+    margin-top: 1rem;
+    padding: 0.6rem 0.9rem;
+    background: var(--blue-50);
+    border-left: 3px solid var(--blue-400);
+    border-radius: 0 6px 6px 0;
+    font-size: 0.825rem;
+    color: var(--blue-800);
+    font-weight: 500;
+  }
+
+  /* SKILLS */
+  #skills { background: var(--white); }
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.25rem;
+  }
+  .skill-card {
+    background: var(--slate-50);
+    border: 1px solid var(--slate-200);
+    border-radius: 10px;
+    padding: 1.25rem 1.5rem;
+    transition: border-color 0.2s, background 0.2s;
+  }
+  .skill-card:hover { border-color: var(--blue-300); background: var(--blue-50); }
+  .skill-icon {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+  .skill-name {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--slate-700);
+    margin-bottom: 0.25rem;
+  }
+  .skill-desc {
+    font-size: 0.775rem;
+    color: var(--slate-400);
+    line-height: 1.5;
+  }
+  .skills-languages {
+    margin-top: 2.5rem;
+  }
+  .skills-languages h3 {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--slate-500);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+  .lang-list { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+  .lang-pill {
+    display: flex; align-items: center; gap: 0.5rem;
+    padding: 0.4rem 1rem;
+    background: var(--white);
+    border: 1px solid var(--slate-200);
+    border-radius: 999px;
+    font-size: 0.825rem;
+    color: var(--slate-600);
+  }
+  .lang-level {
+    font-size: 0.7rem;
+    background: var(--blue-100);
+    color: var(--blue-700);
+    padding: 0.1rem 0.4rem;
+    border-radius: 4px;
+    font-weight: 600;
+  }
+
+  /* CONTACT */
+  #contact {
+    background: var(--blue-900);
+    color: var(--white);
+  }
+  #contact .section-label { color: var(--blue-300); }
+  #contact .section-title { color: var(--white); }
+  #contact .divider { background: var(--blue-400); }
+  .contact-text {
+    font-size: 1rem;
+    color: var(--blue-100);
+    line-height: 1.8;
+    max-width: 600px;
+    margin-bottom: 2.5rem;
+  }
+  .contact-links {
+    display: flex; flex-wrap: wrap; gap: 1rem;
+  }
+  .contact-link {
+    display: flex; align-items: center; gap: 0.6rem;
+    padding: 0.75rem 1.25rem;
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 8px;
+    color: var(--white);
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: background 0.2s, border-color 0.2s;
+  }
+  .contact-link:hover { background: rgba(255,255,255,0.14); border-color: rgba(255,255,255,0.3); }
+  .contact-link-icon { font-size: 1rem; }
+
+  /* FOOTER */
+  footer {
+    background: var(--slate-900);
+    padding: 2.5rem 2rem;
+    text-align: center;
+  }
+  .footer-inner { max-width: 860px; margin: 0 auto; }
+  .footer-tagline {
+    font-size: 0.875rem;
+    color: var(--slate-400);
+    margin-bottom: 1.5rem;
+  }
+  .footer-tagline strong { color: var(--blue-400); font-weight: 500; }
+  .footer-links {
+    display: flex; justify-content: center; flex-wrap: wrap; gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  .footer-link {
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    color: var(--slate-400);
+    text-decoration: none;
+    font-size: 0.825rem;
+    transition: color 0.2s;
+    padding: 0.3rem 0.7rem;
+    border: 1px solid var(--slate-700);
+    border-radius: 6px;
+  }
+  .footer-link:hover { color: var(--blue-400); border-color: var(--blue-800); }
+  .footer-copy {
+    font-size: 0.75rem;
+    color: var(--slate-600);
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 680px) {
+    .hero-inner { grid-template-columns: 1fr; text-align: center; gap: 2rem; }
+    .hero-photo-wrap { order: -1; }
+    .hero-btns { justify-content: center; }
+    .hero-location { justify-content: center; }
+    nav { padding: 0 1rem; }
+    .nav-links { gap: 1rem; }
+    section { padding: 3.5rem 1.25rem; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#hero" class="nav-logo">S. Deshmukh</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-inner container">
+    <div>
+      <p class="hero-eyebrow">Portfolio · Industrial Engineer</p>
+      <h1 class="hero-name">Shantanu<br>Deshmukh</h1>
+      <p class="hero-tagline">Making operations leaner, smarter, and more efficient — one process at a time.</p>
+      <p class="hero-location">Ingolstadt, Germany · Open to relocation</p>
+      <div class="hero-btns">
+        <a href="#contact" class="btn-primary">Get in touch</a>
+        <a href="#" class="btn-secondary" download>Download CV (EN)</a>
+        <a href="#" class="btn-secondary" download>Download CV (DE)</a>
+      </div>
+    </div>
+    <div class="hero-photo-wrap">
+      <!--
+        Replace the placeholder below with your actual photo:
+        <img src="photo.jpg" alt="Shantanu Deshmukh" class="hero-photo"/>
+
+        To use a photo: save it as photo.jpg in the same folder as this file,
+        then delete the div.hero-photo-placeholder and uncomment the img tag above.
+      -->
+      <div class="hero-photo-placeholder">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+          <circle cx="12" cy="7" r="4"/>
+        </svg>
+        <span>Add your photo<br/>→ photo.jpg</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <p class="section-label">Who I am</p>
+    <h2 class="section-title">About Me</h2>
+    <div class="divider"></div>
+    <div class="about-text">
+      <p>I bring a cross-disciplinary background in Mechanical and Industrial Engineering with hands-on experience across manufacturing, R&D, and warehouse operations. My work is driven by a consistent philosophy: find the inefficiency, eliminate it, and build something better in its place.</p>
+      <p>At <strong>Bosch</strong>, I applied Lean and GEMBA principles in Production Planning & Control — reducing search times, enforcing FIFO standards, and mapping value streams to cut inventory waste. My Bachelor's thesis centred on Lean Organization implementation, where Kaizen-driven process standardization delivered measurable cost reductions.</p>
+      <p>At <strong>Crompton Greaves R&D</strong>, I redesigned Switchgear assemblies using AutoCAD and Inventor to reduce part counts and material costs, while building a reusable parts library that eliminated redundant design work across assemblies.</p>
+      <p>At <strong>POCO Einrichtungsmärkte</strong>, I transformed warehouse operations through strategic inventory reorganization and lean standardization — achieving over 20% reduction in customer returns, lower order cycle times, and optimized labour efficiency at scale.</p>
+      <p>Across all roles, I have worked with SAP ERP for material planning and logistics coordination. I approach every project with an owner's mindset: not just completing tasks, but contributing to strategic outcomes.</p>
+    </div>
+    <div class="about-tags">
+      <span class="tag">Lean Manufacturing</span>
+      <span class="tag">Value Stream Mapping</span>
+      <span class="tag">Kaizen</span>
+      <span class="tag">5S</span>
+      <span class="tag">SAP ERP</span>
+      <span class="tag">Supply Chain</span>
+      <span class="tag">Process Optimization</span>
+      <span class="tag">AutoCAD · Inventor</span>
+      <span class="tag">GEMBA</span>
+      <span class="tag">FIFO</span>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="container">
+    <p class="section-label">What I've done</p>
+    <h2 class="section-title">Projects</h2>
+    <div class="divider"></div>
+    <div class="projects-grid">
+
+      <!-- Project 1 -->
+      <div class="project-card">
+        <p class="project-company">Bosch · Nashik, India</p>
+        <h3 class="project-title">Lean Organization in the Value Stream</h3>
+        <p class="project-period">Nov 2021 – May 2022 · Bachelor Thesis</p>
+        <div class="star-block">
+          <p class="star-label">Situation</p>
+          <p class="star-text">The production area had excess inventory, unclear FIFO standards, and significant non-value-added search time at storage locations.</p>
+        </div>
+        <div class="star-block">
+          <p class="star-label">Task</p>
+          <p class="star-text">Implement Lean Organization principles across the value stream to reduce waste and standardize inventory flow.</p>
+        </div>
+        <div class="star-block">
+          <p class="star-label">Action</p>
+          <p class="star-text">Created a Value Stream Map to identify bottlenecks. Applied 5S and GEMBA at storage locations. Used Kaizen visualization for consumption control. Tracked inventory with SAP ERP (PP).</p>
+        </div>
+        <div class="project-result">✦ Result — Reduced search time, enforced FIFO, cut excess inventory, and delivered measurable cost reductions through standardized processes.</div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-card">
+        <p class="project-company">Crompton Greaves · Nashik, India</p>
+        <h3 class="project-title">Switchgear Redesign & Parts Standardization</h3>
+        <p class="project-period">Aug 2022 – Jan 2023 · Trainee Engineer, R&D</p>
+        <div class="star-block">
+          <p class="star-label">Situation</p>
+          <p class="star-text">Switchgear assemblies used a high number of fasteners and hardware, with no shared parts library across assemblies — leading to redundant design hours and high material costs.</p>
+        </div>
+        <div class="star-block">
+          <p class="star-label">Task</p>
+          <p class="star-text">Redesign assemblies for cost reduction and create a reusable standard parts library for the R&D team.</p>
+        </div>
+        <div class="star-block">
+          <p class="star-label">Action</p>
+          <p class="star-text">Used Autodesk Inventor and AutoCAD to redesign Switchgear assemblies, minimizing fastener count. Built a standard parts library usable across multiple assemblies. Managed material procurement via SAP.</p>
+        </div>
+        <div class="project-result">✦ Result — Lowered material costs through part count reduction. Eliminated redundant design work and accelerated the manufacturing process.</div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="project-card">
+        <p class="project-company">POCO Einrichtungsmärkte · Munich</p>
+        <h3 class="project-title">Warehouse Operations Transformation</h3>
+        <p class="project-period">Sep 2025 – Present · Working Student</p>
+        <div class="star-block">
+          <p class="star-label">Situation</p>
+          <p class="star-text">Warehouse operations had high customer return rates, long order cycle times, and inefficient inventory placement causing excessive search and pick times.</p>
+        </div>
+        <div class="star-block">
+          <p class="star-label">Task</p>
+          <p class="star-text">Improve warehouse efficiency through systematic inventory management and lean principles.</p>
+        </div>
+        <div class="star-block">
+          <p class="star-label">Action</p>
+          <p class="star-text">Proactively identified operational bottlenecks and reorganized inventory locations strategically. Standardized processes to maximize space utilization and improve picking efficiency.</p>
+        </div>
+        <div class="project-result">✦ Result — 20%+ reduction in customer returns. Lower order cycle times, higher satisfaction, and sustained high-volume operations with optimized labour requirements.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="container">
+    <p class="section-label">What I work with</p>
+    <h2 class="section-title">Skills</h2>
+    <div class="divider"></div>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <span class="skill-icon">🏭</span>
+        <p class="skill-name">SAP ERP (PP · MM)</p>
+        <p class="skill-desc">Production planning, inventory tracking, material procurement and logistics coordination</p>
+      </div>
+      <div class="skill-card">
+        <span class="skill-icon">📦</span>
+        <p class="skill-name">WMS · LVS (DE)</p>
+        <p class="skill-desc">Warehouse management systems, inbound/outbound logistics, inventory accuracy</p>
+      </div>
+      <div class="skill-card">
+        <span class="skill-icon">📊</span>
+        <p class="skill-name">MS Office Suite</p>
+        <p class="skill-desc">Excel dashboards, reports, PowerPoint presentations, Outlook, Teams</p>
+      </div>
+      <div class="skill-card">
+        <span class="skill-icon">📐</span>
+        <p class="skill-name">CAD · Design</p>
+        <p class="skill-desc">Autodesk Inventor, AutoCAD, PTC Creo — 2D drafting & 3D modelling</p>
+      </div>
+      <div class="skill-card">
+        <span class="skill-icon">🔄</span>
+        <p class="skill-name">Lean · Kaizen · 5S</p>
+        <p class="skill-desc">Value Stream Mapping, GEMBA, FIFO, continuous improvement methodologies</p>
+      </div>
+      <div class="skill-card">
+        <span class="skill-icon">🗂️</span>
+        <p class="skill-name">Project Management</p>
+        <p class="skill-desc">Jira, Scrum, structured scheduling and cross-team coordination</p>
+      </div>
+    </div>
+
+    <div class="skills-languages">
+      <h3>Languages</h3>
+      <div class="lang-list">
+        <div class="lang-pill">🇬🇧 English <span class="lang-level">C1 · Business Fluent</span></div>
+        <div class="lang-pill">🇩🇪 German <span class="lang-level">B1 · Intermediate</span></div>
+        <div class="lang-pill">🇮🇳 Marathi &amp; Hindi <span class="lang-level">Native</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <p class="section-label">Get in touch</p>
+    <h2 class="section-title">Contact</h2>
+    <div class="divider"></div>
+    <p class="contact-text">I'm finishing my Master's in Industrial Engineering and actively looking for full-time junior or trainee positions in Germany. My focus areas are Supply Chain Management, Logistics, Operations, Process Engineering, Continuous Improvement, Purchasing, and Business Administration. I'm available from August onwards — or immediately for the right opportunity — and open to relocation anywhere within Germany. Feel free to reach out; I typically respond within a day.</p>
+    <div class="contact-links">
+      <a href="https://www.linkedin.com/in/shan-desh/" target="_blank" class="contact-link">
+        <span class="contact-link-icon">💼</span> LinkedIn
+      </a>
+      <a href="mailto:shan2desh@gmail.com" class="contact-link">
+        <span class="contact-link-icon">✉️</span> shan2desh@gmail.com
+      </a>
+      <a href="tel:+4915510272893" class="contact-link">
+        <span class="contact-link-icon">📞</span> +49 15510272893
+      </a>
+      <a href="Taschenturmstr. 4, 85049 Ingolstadt" class="contact-link">
+        <span class="contact-link-icon">📍</span> Ingolstadt, Germany
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <p class="footer-tagline">Let's connect — find me on <strong>LinkedIn</strong>, download my resume, or reach out directly.</p>
+    <div class="footer-links">
+      <a href="https://www.linkedin.com/in/shan-desh/" target="_blank" class="footer-link">💼 LinkedIn</a>
+      <a href="#" class="footer-link" download>📄 CV (English)</a>
+      <a href="#" class="footer-link" download>📄 CV (Deutsch)</a>
+      <a href="mailto:shan2desh@gmail.com" class="footer-link">✉️ Email</a>
+      <a href="tel:+4915510272893" class="footer-link">📞 Call</a>
+    </div>
+    <p class="footer-copy">© 2026 Shantanu Deshmukh · Ingolstadt, Germany</p>
+  </div>
+</footer>
+
+</body>
+</html>
