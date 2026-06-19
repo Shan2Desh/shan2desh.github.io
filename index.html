@@ -381,7 +381,7 @@
   .cert-card {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     gap: 1.5rem;
     flex: 1 1 460px;
     max-width: 560px;
@@ -392,12 +392,19 @@
     transition: border-color 0.2s, background 0.2s;
   }
   .cert-card:hover { border-color: var(--blue-300); background: var(--blue-50); }
-  .cert-badge {
+  img.cert-badge {
     height: 150px;
     width: auto;
     max-width: 130px;
     object-fit: contain;
     flex-shrink: 0;
+    align-self: center;
+  }
+  svg.cert-badge {
+    height: 56px;
+    width: 56px;
+    flex-shrink: 0;
+    margin-top: 0.2rem;
   }
   .cert-info { display: flex; flex-direction: column; }
   .cert-name {
@@ -410,10 +417,12 @@
     font-size: 0.85rem;
     color: var(--slate-400);
     line-height: 1.5;
+    text-align: justify;
   }
   @media (max-width: 480px) {
     .cert-card { flex: 1 1 100%; max-width: 100%; padding: 1.25rem 1.5rem; }
-    .cert-badge { height: 110px; max-width: 96px; }
+    img.cert-badge { height: 110px; max-width: 96px; }
+    svg.cert-badge { height: 44px; width: 44px; }
   }
 
   /* CONTACT */
@@ -704,6 +713,17 @@
           <div class="cert-info">
             <span class="cert-name">Six Sigma White Belt</span>
             <span class="cert-issuer">Certified</span>
+          </div>
+        </div>
+        <div class="cert-card">
+          <svg class="cert-badge" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="32" cy="24" r="16" stroke="#215E99" stroke-width="3"/>
+            <path d="M24 38 L20 58 L32 51 L44 58 L40 38" stroke="#215E99" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" fill="none"/>
+            <path d="M25 24 L30 29 L40 18" stroke="#215E99" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          </svg>
+          <div class="cert-info">
+            <span class="cert-name">Lean Leadership Training — Audi Akademie</span>
+            <span class="cert-issuer">Hands-on program with a live production simulation applying Toyota Way principles: waste elimination, Value Stream Mapping, and process redesign, alongside team-based problem-solving.</span>
           </div>
         </div>
       </div>
