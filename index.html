@@ -362,6 +362,19 @@
     align-self: flex-start;
     margin-top: 0.2rem;
   }
+  .cert-badges-duo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+    flex-shrink: 0;
+    align-self: center;
+  }
+  .cert-badges-duo img {
+    height: 80px;
+    width: 80px;
+    object-fit: contain;
+  }
   .cert-info { display: flex; flex-direction: column; justify-content: center; }
   .cert-name { font-weight: 600; font-size: 1.05rem; color: var(--slate-700); margin-bottom: 0.3rem; }
   .cert-issuer { font-size: 0.85rem; color: var(--slate-400); line-height: 1.5; text-align: justify; }
@@ -633,6 +646,16 @@
           <div class="cert-info">
             <span class="cert-name">Toyota Production System — NPTEL (IIT Roorkee)</span>
             <span class="cert-issuer">8-week certified course on Toyota Production System fundamentals — waste elimination, Just-in-Time, and Jidoka principles — completed with an Elite certification rating.</span>
+          </div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-badges-duo">
+            <img src="Kickoff-Badge-Agile.png" alt="PMI Kickoff Agile badge"/>
+            <img src="Kickoff-Badge-Predictive.png" alt="PMI Kickoff Predictive badge"/>
+          </div>
+          <div class="cert-info">
+            <span class="cert-name">PMI Kickoff — Basics of Project Management</span>
+            <span class="cert-issuer">Agile &amp; Predictive · Project Management Institute. Foundational program covering core project management approaches across both adaptive and plan-based methodologies.</span>
           </div>
         </div>
       </div>
